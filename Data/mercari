@@ -1,0 +1,4 @@
+git clone https://github.com/mercari/DataflowTemplate
+mvn clean package -DskipTests -Dimage=us-central1-docker.pkg.dev/spanner-demos-ce/bagchi-bqspanner/cloud
+
+mvn clean package -DskipTests -Dimage=gcr.io/spanner-demos-ce/bagchi-bqspanner

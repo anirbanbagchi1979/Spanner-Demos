@@ -1,0 +1,37 @@
+{
+  "tables": [
+    {
+      "table_name": "ASSET_MANAGERS",
+      "file_patterns": [
+        "gs://sec-data-demo/Managers.csv"
+      ],
+      "columns": [
+        {"column_name": "Name", "type_name": "STRING"}
+      ]
+    },
+    {
+      "table_name": "COMPANIES",
+      "file_patterns": [
+        "gs://sec-data-demo/Companies.csv"
+      ],
+      "columns": [
+        {"column_name": "CUSIP", "type_name": "STRING"},
+        {"column_name": "COMPANY_NAME", "type_name": "STRING"}      ]
+    },
+    {
+      "table_name": "TRANSACTIONS",
+      "file_patterns": [
+        "gs://sec-data-demo/Transactions.csv"
+      ],
+      "columns": [
+        {"column_name": "REPORT_DATE", "type_name": "STRING"},
+        {"column_name": "Value", "type_name": "INT64"},
+        {"column_name": "Shares", "type_name": "INT64"},
+        {"column_name": "SourceFilingId", "type_name": "STRING"},
+        {"column_name": "ManagerName", "type_name": "STRING"},
+        {"column_name": "CUSIP", "type_name": "STRING"},
+        {"column_name": "COMPANY_NAME", "type_name": "STRING"}
+      ]
+    }
+  ]
+}

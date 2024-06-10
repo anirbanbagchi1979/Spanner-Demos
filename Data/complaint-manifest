@@ -1,0 +1,30 @@
+{
+  "tables": [
+    {
+      "table_name": "Complaints",
+      "file_patterns": [
+        "gs://spanner-demo-reviewdata/edited*.csv"
+      ],
+      "columns": [
+        {"column_name": "DateReceived", "type_name": "STRING"},
+        {"column_name": "Product", "type_name": "STRING"},
+        {"column_name": "SubProduct", "type_name": "STRING"},
+        {"column_name": "Issue", "type_name": "STRING"},
+        {"column_name": "SubIssue", "type_name": "STRING"},
+        {"column_name": "Consumer_Complaint", "type_name": "STRING"},
+        {"column_name": "Company_Response", "type_name": "STRING"},
+        {"column_name": "Company_Name", "type_name": "STRING"},
+        {"column_name": "State", "type_name": "STRING"},
+        {"column_name": "ZipCode", "type_name": "STRING"},
+        {"column_name": "Tags", "type_name": "STRING"},
+        {"column_name": "ConsumerConsentProvided", "type_name": "STRING"},
+        {"column_name": "SubmittedVia", "type_name": "STRING"},
+        {"column_name": "DateSentToCompany", "type_name": "STRING"},
+        {"column_name": "Company_response_to_consumer", "type_name": "STRING"},
+        {"column_name": "TimelyResponse", "type_name": "STRING"},
+        {"column_name": "ConsumerDisputed", "type_name": "STRING"},
+        {"column_name": "complaint_id", "type_name": "STRING"}
+      ]
+    }
+  ]
+}

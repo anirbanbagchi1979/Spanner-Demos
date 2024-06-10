@@ -1,0 +1,24 @@
+ALTER TABLE
+  Complaints ADD COLUMN Company_Name_Tokens TOKENLIST AS (TOKENIZE_FULLTEXT(Company_Name)) HIDDEN 
+
+
+ALTER TABLE
+  Complaints ADD COLUMN Consumer_Complaint_Tokens TOKENLIST AS (TOKENIZE_FULLTEXT(Consumer_Complaint)) HIDDEN 
+
+CREATE SEARCH INDEX Company_Name_IDX ON
+Complaints(Company_Name_Tokens)
+
+
+CREATE SEARCH INDEX Consumer_Complaint_IDX ON
+Complaints(Consumer_Complaint_Tokens)
+
+
+
+select DISTINCT Company_Name from Complaints
+
+SELECT DISTINCT Company_Name from Complaints where SEARCH(Company_Name_Tokens,'Legal | Bureau')
+
+SELECT DISTINCT Company_Name from Complaints where SEARCH(Company_Name_Tokens,'Legal',enhance_query>=true)
+
+
+SELECT Consumer_Complaint from Complaints LIMIT 100 

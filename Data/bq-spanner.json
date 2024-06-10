@@ -1,0 +1,24 @@
+{
+  "sources": [
+     {
+       "name": "bigqueryInput",
+       "module": "bigquery",
+       "parameters": {
+         "query": "SELECT * FROM bigquery-public-data.cfpb_complaints.complaint_database where  company_name =  \"NAVY FEDERAL CREDIT UNION\" ;"
+       }
+     }
+   ],
+   "sinks": [
+     {
+       "name": "spannerOutput",
+       "module": "spanner",
+       "input": "bigqueryInput",
+       "parameters": {
+         "projectId": "spanner-demos-ce",
+         "instanceId": "spanner-fts",
+         "databaseId": "sec_data",
+         "table": "Complaints"
+       }
+     }
+   ]
+ }
